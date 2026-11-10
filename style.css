@@ -1,0 +1,452 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #080808;
+    color: #f5f5f5;
+    font-family: Arial, sans-serif;
+    line-height: 1.8;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 8%;
+    border-bottom: 1px solid #222;
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: bold;
+    color: #d6b46a;
+}
+
+.logo span {
+    color: white;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: #ddd;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #d6b46a;
+}
+
+.hero {
+    min-height: 530px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 70px 20px;
+}
+
+.tag {
+    color: #d6b46a;
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-size: clamp(42px, 7vw, 75px);
+    line-height: 1.3;
+    margin-bottom: 20px;
+}
+
+h1 span {
+    color: #d6b46a;
+}
+
+.description {
+    color: #aaa;
+    max-width: 550px;
+    margin-bottom: 30px;
+}
+
+.main-button {
+    background: #d6b46a;
+    color: #080808;
+    padding: 12px 30px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.section {
+    padding: 80px 8%;
+    text-align: center;
+    border-top: 1px solid #222;
+}
+
+.section h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.section > p:not(.tag) {
+    color: #aaa;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 35px;
+}
+
+.card {
+    background: #121212;
+    border: 1px solid #292929;
+    border-radius: 12px;
+    padding: 30px;
+    text-align: right;
+    transition: 0.3s;
+}
+
+.card:hover {
+    border-color: #d6b46a;
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    color: #d6b46a;
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #aaa;
+}
+
+.quiz button {
+    background: #d6b46a;
+    color: #080808;
+    border: none;
+    padding: 12px 35px;
+    margin: 15px 5px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#result {
+    margin-top: 15px;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    border-top: 1px solid #222;
+    color: #777;
+}
+
+@media (max-width: 650px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav {
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+}
+/* تنسيق الاختبار */
+.quiz {
+    text-align: center;
+}
+
+#quizProgress {
+    color: #d6b46a;
+    margin: 25px 0 15px;
+    font-size: 14px;
+}
+
+#quizQuestion {
+    color: #ffffff;
+    margin-bottom: 25px;
+    line-height: 1.8;
+}
+
+#quizOptions {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+#quizOptions button,
+#quizNext {
+    background: #d6b46a;
+    color: #111111;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#quizOptions button:hover,
+#quizNext:hover {
+    background: #f0d18a;
+    transform: translateY(-2px);
+}
+
+#quizOptions button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+#quizFeedback {
+    margin-top: 20px;
+    color: #d6b46a;
+    font-weight: bold;
+}
+
+#quizNext {
+    margin-top: 15px;
+}
+
+#quizResult {
+    margin-top: 25px;
+    color: #d6b46a;
+    font-size: 22px;
+    font-weight: bold;
+}
+/* تنسيق نموذج التواصل */
+#contactForm {
+    max-width: 600px;
+    margin: 35px auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+#contactForm input,
+#contactForm textarea {
+    width: 100%;
+    padding: 16px;
+    background: #151515;
+    border: 1px solid #444;
+    border-radius: 10px;
+    color: white;
+    font-family: inherit;
+    font-size: 15px;
+    outline: none;
+}
+
+#contactForm input:focus,
+#contactForm textarea:focus {
+    border-color: #d6b46a;
+}
+
+#contactForm textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
+#contactForm button {
+    background: #d6b46a;
+    color: #111;
+    border: none;
+    padding: 15px;
+    border-radius: 10px;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#contactForm button:hover {
+    background: #f0d18a;
+    transform: translateY(-2px);
+}
+
+#contactResult {
+    color: #d6b46a;
+    text-align: center;
+}
+/* تنسيق النصائح الرقمية */
+#tips .card {
+    border: 1px solid #444;
+    background: #151515;
+    padding: 25px;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+#tips .card:hover {
+    border-color: #d6b46a;
+    transform: translateY(-5px);
+}
+
+#tips .card h3 {
+    color: #d6b46a;
+    margin-bottom: 12px;
+}
+
+#tips .card p {
+    color: #cccccc;
+    line-height: 1.8;
+}
+/* صندوق النصيحة المتغيرة */
+.tip-box {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 25px;
+    text-align: center;
+    background: #151515;
+    border: 1px solid #d6b46a;
+    border-radius: 12px;
+}
+
+#randomTip {
+    color: white;
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+#newTip {
+    background: #d6b46a;
+    color: #111;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#newTip:hover {
+    background: #f0d18a;
+    transform: translateY(-2px);
+}
+/* تنسيق إحصائيات المبادرة */
+#stats .card {
+    text-align: center;
+    border: 1px solid #444;
+    background: #151515;
+    padding: 30px;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+#stats .card:hover {
+    border-color: #d6b46a;
+    transform: translateY(-5px);
+}
+
+#stats .card h3 {
+    color: #d6b46a;
+    margin-bottom: 15px;
+}
+
+#stats .card p {
+    color: #cccccc;
+    line-height: 1.8;
+}
+/* تنسيق رحلة المبادرة */
+#journey .card {
+    background: #151515;
+    border: 1px solid #444;
+    padding: 25px;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+#journey .card:hover {
+    border-color: #d6b46a;
+    transform: translateY(-5px);
+}
+
+#journey .card h3 {
+    color: #d6b46a;
+    margin-bottom: 12px;
+}
+
+#journey .card p {
+    color: #cccccc;
+    line-height: 1.8;
+}
+/* تنسيق فريق المبادرة */
+#team .card {
+    background: #151515;
+    border: 1px solid #444;
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+#team .card:hover {
+    border-color: #d6b46a;
+    transform: translateY(-5px);
+}
+
+#team .card h3 {
+    color: #d6b46a;
+    margin-bottom: 12px;
+}
+
+#team .card p {
+    color: #cccccc;
+    line-height: 1.8;
+}
+/* تحسين عرض الموقع على الجوال */
+@media (max-width: 650px) {
+    header {
+        padding: 20px 15px;
+    }
+
+    nav {
+        gap: 10px;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+
+    .section {
+        padding: 50px 18px;
+    }
+
+    .section h2 {
+        font-size: 26px;
+    }
+
+    .hero {
+        padding: 55px 18px;
+    }
+
+    .quiz button,
+    #quizOptions button {
+        width: 100%;
+        margin: 8px 0;
+    }
+}

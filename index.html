@@ -1,0 +1,263 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>وعي | WA3I</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">وَعْي<span>.</span></div>
+
+        <nav>
+            <a href="#home">الرئيسية</a>
+            <a href="#about">عن المبادرة</a>
+            <a href="#topics">المواضيع</a>
+            <a href="#tips">نصائح رقمية</a>
+            <a href="#stats">أثر المبادرة</a>
+            <a href="#journey">رحلة المبادرة</a>
+            <a href="#team">فريق المبادرة</a>
+            <a href="#quiz">اختبر نفسك</a>
+            <a href="#contact">تواصل معنا</a>
+
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <p class="tag">مبادرة للتوعية الرقمية</p>
+            <h1>كن واعيًا في<br><span>العالم الرقمي</span></h1>
+            <p class="description">
+                المعرفة الرقمية ليست خيارًا، بل مسؤولية.
+                تعلّم كيف تحمي نفسك وتستخدم التقنية بوعي.
+            </p>
+            <a href="#topics" class="main-button">اكتشف المحتوى</a>
+            </section>
+        <section class="section" id="about">
+    <p class="tag">من نحن؟</p>
+    <h2>عن مبادرة وعي</h2>
+
+    <p class="description">
+        وعي مبادرة توعوية تهدف إلى بناء جيل رقمي واعٍ،
+        يمتلك المعرفة والمهارات اللازمة للتعامل مع التقنية
+        بأمان ومسؤولية.
+    </p>
+
+    <div class="cards">
+        <article class="card">
+            <h3>رؤيتنا</h3>
+            <p>مجتمع رقمي أكثر وعيًا وأمانًا.</p>
+        </article>
+
+        <article class="card">
+            <h3>رسالتنا</h3>
+            <p>نشر المعرفة الرقمية وتعزيز الاستخدام الآمن للتقنية.</p>
+        </article>
+
+        <article class="card">
+            <h3>أهدافنا</h3>
+            <p>تعزيز الأمان الرقمي ومكافحة الاحتيال ونشر الوعي التقني.</p>
+        </article>
+    </div>
+</section>
+<section class="section" id="topics">
+    <p class="tag">تعلّم واكتشف</p>
+    <h2>مجالات الوعي الرقمي</h2>
+    <p class="description">
+        اكتسب المعرفة والمهارات التي تساعدك على التعامل مع العالم الرقمي بوعي وأمان.
+    </p>
+
+    <div class="cards">
+        <article class="card">
+            <h3>الأمان الرقمي</h3>
+            <p>حافظ على خصوصيتك ولا تشارك كلمات المرور أو رموز التحقق مع الآخرين.</p>
+            <p><strong>نصيحة:</strong> استخدم كلمة مرور قوية ومختلفة لكل حساب.</p>
+        </article>
+
+        <article class="card">
+            <h3>الاحتيال الإلكتروني</h3>
+            <p>انتبه للرسائل التي تطلب بياناتك أو تعدك بجوائز غير متوقعة.</p>
+            <p><strong>نصيحة:</strong> تحقق من مصدر الرابط قبل الضغط عليه.</p>
+        </article>
+
+        <article class="card">
+            <h3>الذكاء الاصطناعي</h3>
+            <p>استفد من أدوات الذكاء الاصطناعي في التعلم والإبداع مع مراجعة نتائجها.</p>
+            <p><strong>نصيحة:</strong> لا تشارك معلوماتك الشخصية مع الأدوات الرقمية.</p>
+        </article>
+
+        <article class="card">
+            <h3>التحقق من الأخبار</h3>
+            <p>لا تصدق كل ما تشاهده على الإنترنت، فقد تكون بعض المعلومات مضللة.</p>
+            <p><strong>نصيحة:</strong> ارجع إلى المصادر الموثوقة قبل نشر أي خبر.</p>
+        </article>
+    </div>
+</section>
+
+ 
+
+ <section class="section quiz" id="quiz">
+    <p class="tag">اختبر معلوماتك</p>
+    <h2>هل أنت واعٍ رقميًا؟</h2>
+
+    <p id="quizProgress">السؤال 1 من 5</p>
+    <h3 id="quizQuestion"></h3>
+
+    <div id="quizOptions"></div>
+
+    <p id="quizFeedback"></p>
+
+    <button id="quizNext" type="button" hidden>
+        السؤال التالي
+    </button>
+
+    <div id="quizResult"></div>
+    <button id="quizRestart" type="button" hidden>
+    إعادة الاختبار
+</button>
+<section class="section" id="tips">
+    <p class="tag">كن أكثر وعيًا</p>
+    <h2>نصائح رقمية</h2>
+
+    <p class="description">
+        خطوات بسيطة تساعدك على حماية نفسك في العالم الرقمي.
+    </p>
+    <div class="tip-box">
+    <p id="randomTip">لا تشارك كلمات المرور مع الآخرين.</p>
+    <button id="newTip" type="button">نصيحة جديدة</button>
+</div>
+
+    <div class="cards">
+        <div class="card">
+            <h3>احمِ كلمات مرورك</h3>
+            <p>استخدم كلمات مرور قوية ولا تشاركها مع الآخرين.</p>
+        </div>
+
+        <div class="card">
+            <h3>تحقق قبل النقر</h3>
+            <p>تأكد من موثوقية الروابط قبل فتحها.</p>
+        </div>
+
+        <div class="card">
+            <h3>فكر قبل النشر</h3>
+            <p>راجع المعلومات قبل مشاركتها مع الآخرين.</p>
+        </div>
+    </div>
+</section>
+</button>
+</section>
+<section class="section" id="stats">
+    <p class="tag">أثر المبادرة</p>
+    <h2>وعي يصنع الفرق</h2>
+
+    <p class="description">
+        نعمل على نشر الوعي الرقمي وبناء مجتمع أكثر أمانًا.
+    </p>
+
+    <div class="cards">
+        <div class="card">
+            <h3>عدد المستفيدين</h3>
+            <p id="beneficiaries">سيُحدّث بعد تنفيذ النشاط</p>
+        </div>
+
+        <div class="card">
+            <h3>الأنشطة التوعوية</h3>
+            <p id="activities">سيُحدّث بعد تنفيذ الأنشطة</p>
+        </div>
+    </div>
+</section>
+<section class="section" id="journey">
+    <p class="tag">من الفكرة إلى الأثر</p>
+    <h2>رحلة المبادرة</h2>
+
+    <p class="description">
+        مراحل نعمل من خلالها على نشر الوعي الرقمي.
+    </p>
+
+    <div class="cards">
+        <div class="card">
+            <h3>01 - التخطيط</h3>
+            <p>تحديد أهداف المبادرة واختيار موضوعات التوعية.</p>
+        </div>
+
+        <div class="card">
+            <h3>02 - التوعية</h3>
+            <p>تقديم محتوى وأنشطة تثقيفية حول السلامة الرقمية.</p>
+        </div>
+
+        <div class="card">
+            <h3>03 - التفاعل</h3>
+            <p>إشراك المستفيدين من خلال الاختبارات والأنشطة.</p>
+        </div>
+
+        <div class="card">
+            <h3>04 - قياس الأثر</h3>
+            <p>تقييم النتائج وتطوير المبادرة بناءً على الملاحظات.</p>
+        </div>
+    </div>
+</section>
+<section class="section" id="team">
+    <p class="tag">فريق العمل</p>
+    <h2>من يقف خلف المبادرة؟</h2>
+
+    <p class="description">
+        فريق يعمل بشغف لنشر الوعي الرقمي وتعزيز الاستخدام الآمن للتقنية.
+    </p>
+
+    <div class="cards">
+        <div class="card">
+            <h3>قائد المبادرة</h3>
+            <p>الإشراف على المبادرة وتنظيم مراحل العمل.</p>
+        </div>
+
+        <div class="card">
+            <h3>مسؤول المحتوى</h3>
+            <p>إعداد المعلومات والنصائح التوعوية.</p>
+        </div>
+
+        <div class="card">
+            <h3>مسؤول التقنية</h3>
+            <p>تطوير الموقع وإدارة الأدوات التفاعلية.</p>
+        </div>
+    </div>
+</section>
+<section class="section" id="contact">
+    <p class="tag">تواصل معنا</p>
+    <h2>شاركنا رأيك</h2>
+
+    <p class="description">
+        لديك استفسار أو اقتراح؟ يسعدنا الاستماع إليك.
+    </p>
+
+    <form id="contactForm">
+        <input
+            type="text"
+            id="contactName"
+            placeholder="اكتب اسمك"
+            required
+        >
+
+        <textarea
+            id="contactMessage"
+            placeholder="اكتب رسالتك أو اقتراحك"
+            required
+        ></textarea>
+
+        <button type="submit">إرسال الرسالة</button>
+
+        <p id="contactResult"></p>
+    </form>
+
+</section>
+    </main>
+
+    <footer>
+        <p>وعي © 2026 — نحو مجتمع رقمي واعٍ</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
