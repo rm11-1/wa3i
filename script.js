@@ -562,4 +562,6 @@ async function loadBeneficiaries() {
     counter.textContent = Number(data).toLocaleString("ar-SA");
 }
 
-loadBeneficiaries();
+window.addEventListener("load", () => {
+    loadBeneficiaries();
+});
