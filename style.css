@@ -81,7 +81,7 @@ html[data-theme="light"] {
 }
 
 html {
-    scroll-behavior: auto;
+    scroll-behavior: smooth !important ;
     scroll-padding-top: 100px;
 }
 
@@ -1780,4 +1780,12 @@ html[dir="ltr"] #languageToggle {
     color: white;
     transform: translateY(-5px);
     box-shadow: 0 12px 30px rgba(117, 103, 143, .25);
+}
+
+html {
+    scroll-behavior: smooth !important;
+}
+
+section[id] {
+    scroll-margin-top: 100px;
 }
