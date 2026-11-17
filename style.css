@@ -638,7 +638,7 @@ footer {
     *,
     *::before,
     *::after {
-        scroll-behavior: auto !important;
+        scroll-behavior: smooth !important;
         animation-duration: .01ms !important;
         animation-iteration-count: 1 !important;
         transition-duration: .01ms !important;
