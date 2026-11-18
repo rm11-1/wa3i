@@ -270,15 +270,26 @@ function applyLanguage() {
     setTexts("#tips .cards .card h3", t.tipCards);
     setTexts("#tips .cards .card p", t.tipTexts);
 
-    setTexts("#stats .stat-card h3", t.stats);
-    setTexts("#stats .stat-card:nth-child(2) h3", [t.stats[1]]);
-    setTexts("#stats .stat-card:nth-child(2) p", [t.statsPending[1]]);
+    // ===== STATS TRANSLATION =====
 
-   document.querySelector("#stats .stat-card:first-child h3").textContent = t.stats[0];
-   document.querySelector("#beneficiariesCaption").textContent =
+setTexts("#stats .stat-card h3", t.stats);
+
+document.querySelector("#beneficiariesCaption").textContent =
     isEnglish
         ? "Visits that contributed to spreading digital awareness"
         : "زيارة ساهمت في نشر الوعي الرقمي";
+
+document.querySelector("#activities").textContent =
+    t.statsPending[1];
+
+
+    const counter = document.getElementById("beneficiaries");
+
+if (beneficiariesCount !== null) {
+    counter.textContent = beneficiariesCount.toLocaleString(
+        isEnglish ? "en-US" : "ar-SA"
+    );
+}
     setTexts("#journey .card h3", t.journeyTitles);
     setTexts("#journey .card p", t.journeyTexts);
 
@@ -552,6 +563,20 @@ const wa3iClient = window.supabase.createClient(
     "sb_publishable_gazoZ0NQtoUir4q-4WSmIQ_F-tzkpYL"
 );
 
+
+let beneficiariesCount = null;
+
+function updateBeneficiariesDisplay() {
+    const counter = document.getElementById("beneficiaries");
+
+    if (beneficiariesCount === null) return;
+    console.log(language);
+
+    counter.textContent = beneficiariesCount.toLocaleString(
+        language === "en" ? "en-US" : "ar-SA"
+    );
+}
+
 async function loadBeneficiaries() {
     const counter = document.getElementById("beneficiaries");
 
@@ -565,10 +590,10 @@ async function loadBeneficiaries() {
         return;
     }
 
-    counter.textContent = Number(data).toLocaleString(
-    language === "en" ? "en-US" : "ar-SA"
-);
+    beneficiariesCount = Number(data);
+    updateBeneficiariesDisplay();
 }
+
 
 window.addEventListener("load", () => {
     loadBeneficiaries();
