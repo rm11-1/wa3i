@@ -271,8 +271,14 @@ function applyLanguage() {
     setTexts("#tips .cards .card p", t.tipTexts);
 
     setTexts("#stats .stat-card h3", t.stats);
-    setTexts("#stats .stat-card p", t.statsPending);
+    setTexts("#stats .stat-card:nth-child(2) h3", [t.stats[1]]);
+    setTexts("#stats .stat-card:nth-child(2) p", [t.statsPending[1]]);
 
+   document.querySelector("#stats .stat-card:first-child h3").textContent = t.stats[0];
+   document.querySelector("#beneficiariesCaption").textContent =
+    isEnglish
+        ? "Visits that contributed to spreading digital awareness"
+        : "زيارة ساهمت في نشر الوعي الرقمي";
     setTexts("#journey .card h3", t.journeyTitles);
     setTexts("#journey .card p", t.journeyTexts);
 
@@ -559,7 +565,9 @@ async function loadBeneficiaries() {
         return;
     }
 
-    counter.textContent = Number(data).toLocaleString("ar-SA");
+    counter.textContent = Number(data).toLocaleString(
+    language === "en" ? "en-US" : "ar-SA"
+);
 }
 
 window.addEventListener("load", () => {
