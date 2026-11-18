@@ -10,6 +10,10 @@ window.addEventListener("pageshow", () => {
     }, 1000);
 });
 console.log("WA3I SCRIPT LOADED");
+let language = "ar";
+let currentQuestion = 0;
+let score = 0;
+let beneficiariesCount = null;
 const translations = {
     ar: {
         nav: ["الرئيسية", "المبادرة", "المجالات", "النصائح", "الأثر", "الرحلة", "الفريق", "الاختبار", "تواصل"],
@@ -214,9 +218,7 @@ const translations = {
     }
 };
 
-let language = "ar";
-let currentQuestion = 0;
-let score = 0;
+
 
 const $ = selector => document.querySelector(selector);
 const $$ = selector => [...document.querySelectorAll(selector)];
@@ -566,7 +568,7 @@ const wa3iClient = window.supabase.createClient(
 );
 
 
-let beneficiariesCount = null;
+
 
 function updateBeneficiariesDisplay() {
     const counter = document.getElementById("beneficiaries");
