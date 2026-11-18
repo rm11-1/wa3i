@@ -279,8 +279,10 @@ document.querySelector("#beneficiariesCaption").textContent =
         ? "Visits that contributed to spreading digital awareness"
         : "زيارة ساهمت في نشر الوعي الرقمي";
 
-document.querySelector("#activities").textContent =
-    t.statsPending[1];
+     document.querySelector("#activitiesCaption").textContent =
+    isEnglish
+        ? "Activities planned for the WA3I initiative"
+        : "أنشطة مخطط لتنفيذها ضمن مبادرة وَعْي";
 
 
     const counter = document.getElementById("beneficiaries");
